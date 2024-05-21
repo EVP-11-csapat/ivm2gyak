@@ -7,7 +7,7 @@ table 50101 LineTable
             DataClassification = ToBeClassified;
             Caption = 'No.';
         }
-        field(2; "Line No."; Code[20])
+        field(2; "Line No."; Integer)
         {
             DataClassification = ToBeClassified;
         }

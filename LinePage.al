@@ -1,8 +1,9 @@
-page 50100 HeaderPage
+page 50101 LinePage
 {
-    Caption = 'Kolcsonzo Header Page';
-    PageType = Card;
-    SourceTable = HeaderTable;
+    Caption = 'Kolcsonzo Line Page';
+    PageType = ListPart;
+    SourceTable = LineTable;
+    AutoSplitKey = true;
     UsageCategory = Lists;
     ApplicationArea = All;
 
@@ -10,43 +11,36 @@ page 50100 HeaderPage
     {
         area(Content)
         {
-            group(General)
+            repeater(General)
             {
-                Caption = 'General';
-
                 field("No."; Rec."No.")
                 {
                     ApplicationArea = All;
                 }
-                field("Customer No."; Rec."Customer No.")
+                field("Line No."; Rec."Line No.")
                 {
                     ApplicationArea = All;
                 }
-                field("ID No."; Rec."ID No.")
+                field("Item No."; Rec."Item No.")
                 {
                     ApplicationArea = All;
                 }
-                field("Tax No."; Rec."Tax No.")
+                field("Item Name"; Rec."Item Name")
                 {
                     ApplicationArea = All;
                 }
-                field("Customer Name"; Rec."Customer Name")
+                field("Item Price"; Rec."Item Price")
                 {
                     ApplicationArea = All;
                 }
-                field("Customer Address"; Rec."Customer Address")
+                field("Quantity"; Rec."Quantity")
                 {
                     ApplicationArea = All;
                 }
-                field("Customer City"; Rec."Customer City")
+                field("Row Price"; Rec."Row Price")
                 {
                     ApplicationArea = All;
                 }
-            }
-
-            part("Kolcsonzo Line Part"; LinePage)
-            {
-                SubPageLink = "No." = field("No.");
             }
         }
     }
