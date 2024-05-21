@@ -60,7 +60,7 @@ table 50100 HeaderTable
         NoMgt: Codeunit NoSeriesManagement;
     begin
         if "No." = '' then begin
-            "No." := NoMgt.GetNextNo('RNT', Today, true);
+            "No." := NoMgt.GetNextNo('KOLCS', Today, true);
         end;
     end;
 }
