@@ -10,6 +10,8 @@ table 50101 LineTable
         field(2; "Line No."; Integer)
         {
             DataClassification = ToBeClassified;
+            AutoIncrement = true;
+
         }
         field(3; "Item No."; Code[20])
         {
